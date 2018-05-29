@@ -2,7 +2,7 @@
   <div>
     <div class="title">热销推荐</div>
     <ul>
-      <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+      <li class="item border-bottom" v-for="item of list" :key="item.id">
         <img class="item-img" :src="item.imgUrl" />
         <div class="item-info">
           <p class="item-title">{{ item.title }}</p>
@@ -17,25 +17,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      recommendList: [{
-        id: '0001',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1411/1a/5582f9f24bc50b475a8cbda4c5ac8d24.water.jpg_200x200_a0d48950.jpg',
-        title: '秦始皇陵博物院（兵马俑）',
-        desc: '秦始皇帝陵被列入世界文化遗产保护名录，成为中国古代辉煌文明的一张金字名片。'
-      }, {
-        id: '0002',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1602/de/de8400021b664c5390.img.jpg_200x200_46b16057.jpg',
-        title: '华清宫（华清池·骊山）',
-        desc: '白居易的《长恨歌》讲述了唐玄宗与杨贵妃凄婉的爱情故事，而华清宫也因这段风流往事令人神往。'
-      }, {
-        id: '0003',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1508/db/dbd0bef45fbc36b3.img.jpg_200x200_1b88abcf.jpg',
-        title: '大唐芙蓉园',
-        desc: '紫云楼共计四层，每层都以不同的角度，不同的载体共同展示了盛唐帝王文化，体现了“形神升腾紫云景，天下臣服帝王心”的唐代帝王风范。'
-      }]
-    }
+  props: {
+    list: Array
   }
 }
 </script>
