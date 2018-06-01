@@ -18,9 +18,7 @@ npm run build
 npm run build --report
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
-
-##兄弟组件通信（City.vue作为eventBus，在Alphabet和List组件间传值）
+## 兄弟组件通信（City.vue作为eventBus，在Alphabet和List组件间传值）
 1. 在Alphabet中给循环项绑定一个click事件"handleLetterClick"
 2. 在methods中定义这个事件，得到e.target.innerText为点击元素（A、B、C、D... ...）
 3. 将Alphabet中得到的数据传递给City，再通过City传递给List
